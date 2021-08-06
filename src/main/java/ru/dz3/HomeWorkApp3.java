@@ -7,9 +7,9 @@ public class HomeWorkApp3 {
         invertArray();
         fillArray();
         changeArray();
-        fillDiagonal();
-        refMas(5,8);
-        refMinMax();
+        fillDiagonal(4);
+        System.out.println(Arrays.toString(refMas(5,8)));
+        refMinMax(new int[]{1,2,3,4,5,6});
     }
 
 
@@ -46,8 +46,8 @@ public class HomeWorkApp3 {
     //Создать квадратный двумерный целочисленный массив (количество строк и столбцов одинаковое),
     // и с помощью цикла(-ов) заполнить его диагональные элементы единицами (можно только одну из диагоналей, если обе сложно).
     // Определить элементы одной из диагоналей можно по следующему принципу: индексы таких элементов равны, то есть [0][0], [1][1], [2][2], …, [n][n];
-    public static void fillDiagonal() {
-        int[][] arr = new int[4][4];
+    public static void fillDiagonal(int size) {
+        int[][] arr = new int[size][size];
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr.length; j++) {
                 if (i == j) {
@@ -74,19 +74,17 @@ public class HomeWorkApp3 {
     }
 
     //Задать одномерный массив и найти в нем минимальный и максимальный элементы;
-    public static void refMinMax() {
-        int[] arr = {1, 2, 3, 4, 5, 6};
+    public static void refMinMax(int[] arr) {
         int min = arr[0];
         int max = arr[0];
-        for(int i = 1; i < 0; i++) {
+        for(int i = 1; i < arr.length; i++) {
             if(min > arr[i]) {
             min = arr[i];
         }
             if(max < arr[i]) {
                 max = arr[i];
             }
-        System.out.println(min);
-        System.out.println(max);
+        System.out.print(min + max);
     }
     }
 
