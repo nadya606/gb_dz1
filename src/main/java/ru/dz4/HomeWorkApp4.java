@@ -109,25 +109,21 @@ public class HomeWorkApp4 {
             for (int i = 0; i <= SIZE - 1; i++) {
                 for (int j = 0; j <= SIZE - 1; j++) {
                     if (map[i][j] == symb) {
-                        width++;
-                        if (width == SIZE) return true;
+                    if (width == SIZE) return true;
                     }
 
                     if (map[j][i] == symb) {
-                        height++;
-                        if (height == SIZE) return true;
+                    if (height == SIZE) return true;
                     }
                 }
 
                 if (map[i][i] == symb) {
-                    Diagonal1++;
-                    if (Diagonal1 == SIZE) return true;
-                } else Diagonal1 = 0;
+                     if (Diagonal1 == SIZE) return true;
+                }
 
                 if (map[i][SIZE - 1 - i] == symb) {
-                    Diagonal2++;
-                    if (Diagonal2 == SIZE) return true;
-                } else Diagonal2 = 0;
+                   if (Diagonal2 == SIZE) return true;
+                }
             }
             return false;
         }*/
