@@ -21,12 +21,14 @@ public class Plate {
         }
     }*/
 
-    public void decreaseFood(int appetite) {
+    public boolean decreaseFood(int appetite) {
         if (!muchFood(appetite)) {
         System.out.println("Не хватило еды");
+        return false;
         }
         else {
         food = food - appetite;
+        return true;
         }
     }
 
